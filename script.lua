@@ -4,7 +4,7 @@ local LocalPlayer = Players.LocalPlayer
 
 local function verifyWhitelist()
     -- On ajoute "?t=" avec un nombre aléatoire pour forcer GitHub à donner la version la plus récente
-    local url = "https://raw.githubusercontent.com/ayrox8/whitelist.json/main/whitelist.json?t=" .. math.random(1, 100000)
+    local url = "https://raw.githubusercontent.com/ayrox8/whitelist.json/refs/heads/main/whitelist.json?t=" .. math.random(1, 100000)
     
     local success, response = pcall(function()
         return HttpService:GetAsync(url)
